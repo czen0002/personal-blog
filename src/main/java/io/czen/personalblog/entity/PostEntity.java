@@ -2,6 +2,7 @@ package io.czen.personalblog.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -15,11 +16,13 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class PostEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
+    @EqualsAndHashCode.Include
     private Long id;
 
     @Column(name = "title", nullable = false)
