@@ -1,6 +1,6 @@
 package io.czen.personalblog.repository;
 
-import io.czen.personalblog.entities.Post;
+import io.czen.personalblog.entity.Post;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 

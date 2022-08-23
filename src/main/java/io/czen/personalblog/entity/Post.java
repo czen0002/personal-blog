@@ -1,4 +1,4 @@
-package io.czen.personalblog.entities;
+package io.czen.personalblog.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
