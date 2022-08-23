@@ -1,4 +1,4 @@
-package io.czen.personalblog.repositories;
+package io.czen.personalblog.repository;
 
 import io.czen.personalblog.entities.Post;
 import org.springframework.data.repository.PagingAndSortingRepository;
