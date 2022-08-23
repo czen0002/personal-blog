@@ -1,9 +1,9 @@
 package io.czen.personalblog.repository;
 
-import io.czen.personalblog.entity.Post;
+import io.czen.personalblog.entity.PostEntity;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PostRepository extends PagingAndSortingRepository<Post, Long> {
+public interface PostRepository extends PagingAndSortingRepository<PostEntity, Long> {
 }
