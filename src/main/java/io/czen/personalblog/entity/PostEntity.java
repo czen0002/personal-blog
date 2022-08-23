@@ -8,6 +8,8 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
 @Entity
@@ -26,9 +28,11 @@ public class PostEntity {
     private Long id;
 
     @Column(name = "title", nullable = false)
+    @NotBlank(message = "{post.title.NotBlank}")
     private String title;
 
-    @Column(name = "content", columnDefinition = "TEXT")
+    @Column(name = "content", nullable = false, columnDefinition = "TEXT")
+    @NotNull(message = "{post.content.NotNull}")
     private String content;
 
     @Column(name = "date_created", nullable = false)
