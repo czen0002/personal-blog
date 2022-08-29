@@ -3,11 +3,7 @@ package io.czen.personalblog.mapper;
 import io.czen.personalblog.entity.PostEntity;
 import io.czen.personalblog.model.Post;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
 import org.mapstruct.factory.Mappers;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDate;
 import java.util.Arrays;
@@ -17,7 +13,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
-public class PostMapperTest {
+class PostMapperTest {
 
     private final String TITLE = "TITLE";
     private final String CONTENT = "## content";
