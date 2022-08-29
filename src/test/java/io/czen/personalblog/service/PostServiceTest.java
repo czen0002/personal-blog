@@ -104,4 +104,21 @@ class PostServiceTest {
 
         assertThat(result.size(), is(equalTo(3)));
     }
+
+    @Test
+    void expectDeletePost_whenPostExist() {
+        postService.delete(1L);
+        List<Post> result = postService.findAll();
+
+        assertThat(result.size(), is(equalTo(1)));
+    }
+
+    @Test
+    void expectNothing_whenPostNotExist() {
+        postService.delete(3L);
+        List<Post> result = postService.findAll();
+
+        assertThat(result.size(), is(equalTo(2)));
+    }
+
 }

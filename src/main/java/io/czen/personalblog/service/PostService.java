@@ -54,4 +54,8 @@ public class PostService {
         PostEntity updatePostEntity = postMapper.toPostEntity(retrievePost);
         return postMapper.toPost(postRepository.save(updatePostEntity));
     }
+
+    public void delete(Long id) {
+        if (findById(id) != null) postRepository.deleteById(id);
+    }
 }
