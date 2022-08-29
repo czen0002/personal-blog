@@ -2,7 +2,6 @@ package io.czen.personalblog.entity;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
@@ -23,8 +22,7 @@ public class PostEntityTest {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         validator = factory.getValidator();
     }
-
-
+    
     @Test
     void expectNoConstraintViolations_whenValidPostEntity() {
         PostEntity post = new PostEntity();
